@@ -1,6 +1,7 @@
 /* Start Variables */
 :root {
     --main-color: #19c8fa;
+    --trasparent-color: rgb(15 116 143 / 70%);
 
 }
 /* End Variables */
@@ -52,14 +53,14 @@ a {
 /* End Globals */
 /* Start Header */
 header {
-    background: red;
+
     position: absolute;
     left: 0;
     width: 100%;
     z-index: 2;
 }
 header .container {
-    background: green;
+   
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -73,7 +74,7 @@ header .container::before {
     right: 1.5rem;
     left: 1.5rem;
     bottom: 0;
-    background-color: #000;
+    background: #fff;
 }
 header .logo img {
     height: 40px;
@@ -83,7 +84,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    background: blue;
+
 }
 nav .toggle-menu {
     color: #fff;
@@ -111,12 +112,12 @@ nav ul {
         background-color: rgb(0 0 0 / 50%);
         z-index: 6;
     }
+    nav .toggle-menu + ul li a {
+        padding: 1.5rem !important;
+    }
 }
 nav .toggle-menu + ul.active {
     opacity: 1;
-}
-nav .toggle-menu + ul li a {
-    padding: 1.5rem !important;
 }
 nav ul li {
     font-size: 1.4rem;
@@ -160,3 +161,102 @@ nav .form i {
     right: 0;
 }
 /* End Header */
+/* Start Landing */
+.landing {
+    min-height: 100vh;
+    background-color: #1f2021;
+    background-image: url('../images/landing.jpg');
+    background-size: cover;
+    position: relative;
+}
+ .landing .overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color:rgb(0 0 0 / 60%);
+    
+ }
+ .landing .text {
+    color: #fff;
+    position: absolute;
+    background-color: var(--trasparent-color);
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50%;
+    padding: 5rem;
+    display: flex;
+    justify-content: flex-end;
+ }
+ .landing .text .content {
+     max-width: 50rem;
+     
+    }
+    @media (max-width: 767px) {
+       .landing .text {
+           width: 100%;
+         
+       }
+       .landing .text .content {
+        max-width: 100%;
+       
+       }
+    }
+ .landing h2 {
+    font-size: 3.2rem;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+ }
+ .landing p {
+    font-size: 1.4rem;
+    line-height: 2;
+ }
+ @media (max-width: 424px) {
+    .landing h2 {
+        font-size: 2.2rem;
+    }
+    .landing p {
+        font-size: 1rem;
+    }
+ }
+ .change-background {
+    color: #fff;
+    position: absolute;
+ }
+ @media (max-width: 767px) {
+    .change-background {
+        display: none;
+    }
+ }
+ .landing i:first-of-type {
+    top: 50%;
+    left: 3rem;
+    transform: translateY(-50%);
+ }
+ .landing i:nth-of-type(2) {
+    top: 50%;
+    right: 3rem;
+    transform: translateY(-50%);
+ }
+ .bullets {
+    position: absolute;
+    bottom: 3rem;
+    display: flex;
+    left: 50%;
+    transform: translateX(-50%);
+ }
+ .bullets li {
+    width: 2.2rem;
+    height: 2.2rem;
+    border: 1px solid #fff;
+    background: transparent;
+    border-radius: 50%;
+    margin-left: 1rem;
+ }
+ .bullets li.active {
+    background-color: var(--main-color);
+ }
+/* End Landing */
