@@ -546,3 +546,25 @@ img {
 
 }
 /* End Video */
+/* Start About */
+.about {
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 0;
+}
+.about__img {
+    position: relative;
+    bottom: -120px;
+    margin-top: -120px;
+}
+@media (max-width: 767px) {
+    .about__img {
+        bottom: -60px;
+        margin-bottom: -60px;
+    }
+}
+
+.about .main-heading p {
+    margin-bottom: 100px;
+}
+/* End About */
