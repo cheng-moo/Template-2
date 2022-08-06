@@ -2,6 +2,7 @@
 :root {
     --main-color: #19c8fa;
     --trasparent-color: rgb(15 116 143 / 70%);
+    --section-padding: 5rem;
 
 }
 /* End Variables */
@@ -32,6 +33,10 @@ a {
     margin-left: auto;
     margin-right: auto;
 }
+.section {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
 /* Small */
 @media (min-width: 768px) {
     .container {
@@ -51,6 +56,54 @@ a {
     }
 }
 /* End Globals */
+/* Start Components */
+.grid-auto-fit {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-column-gap: 4rem;
+    grid-row-gap: 6rem;
+}
+.main-heading {
+    text-align: center;
+    max-width: 566px;
+    margin: auto;
+}
+.special-heading {
+    font-size: 4rem;
+    font-weight: normal;
+    margin-bottom: 8rem;
+    position: relative;
+    display: inline-block;
+}
+.special-heading::after {
+    content: '';
+    position: absolute;
+    top: calc(100% + 25px);
+    left: 25px;
+    right: 25px;
+    height: 1px;
+    background: #333;
+}
+.special-heading::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #fff;
+    border: 1px solid #333;
+    top: calc(100% + 25px - 7.5px);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+.special-heading + p {
+    font-size: 1.7rem;
+    color: #777;
+    line-height: 2;
+    margin-bottom: 7rem;
+}
+/* End Components */
 /* Start Header */
 header {
 
@@ -126,7 +179,7 @@ nav ul li {
 nav ul li a {
     padding: 4rem 1rem;
     color: #fff;
-    font-weight: 700;
+    font-weight: normal;
     transition: 250ms ease-in-out;
     display: block;
     position: relative;
@@ -260,3 +313,103 @@ nav .form i {
     background-color: var(--main-color);
  }
 /* End Landing */
+/* Start Services */
+.service .text h3 {
+    font-size: 1.9rem;
+    color: var(--main-color);
+    margin-bottom: 3rem;
+}
+.service .text p {
+    font-size: 1.6rem;
+    color: #777;
+    line-height: 2;
+}
+.service i {
+    font-size: 4.5rem;
+    flex-basis: 25rem;
+}
+.service {
+    display: flex;
+}
+@media (max-width: 767px) {
+    .service {
+        flex-direction: column;
+        align-items: center;
+    }
+    .service i {
+        flex-basis: 75px;
+    }
+    .service h3, .service p {
+        text-align: center;
+    }
+    
+}
+/* End Services */
+/* Start Design */
+.design {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    height: 600px;
+    position: relative;
+    background-image: url("../images/design-features.jpg");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+.design::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(0 0 0 / 50%);
+}
+.design__text {
+    background-color: var(--trasparent-color);
+    color: #fff;
+    padding: 5rem;
+   
+}
+.design__text h2 {
+    font-weight: normal;
+    margin-bottom: 5rem;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+.design__text ul {
+    padding: 0 2rem;
+}
+.design__text li {
+    font-size: 1.6rem;
+}
+.design__text li:not(:last-child) {
+    margin-bottom: 2rem;
+}
+.design__text li::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f108";
+    font-weight: 900;
+    margin-right: 20px;
+    position: relative;
+    top: 1px;
+}
+.design__text, .design__img {
+    position: relative;
+    flex: 1;
+    z-index: 2;
+}
+.design__img {
+    bottom: -120px;
+    text-align: center;
+}
+@media (max-width: 767px) {
+    .design__img {
+        display: none;
+    }
+}
+img {
+    max-width: 100%;
+}
+/* End Design */
