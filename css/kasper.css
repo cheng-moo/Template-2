@@ -331,6 +331,15 @@ nav .form i {
 .service {
     display: flex;
 }
+.services-wrapper {
+    place-content: center;
+}
+@media (max-width: 424px) {
+    .service {
+        max-width: 300px;
+        margin: auto;
+    }
+}
 @media (max-width: 767px) {
     .service {
         flex-direction: column;
@@ -370,6 +379,7 @@ nav .form i {
     background-color: var(--trasparent-color);
     color: #fff;
     padding: 5rem;
+    line-height: 1.5;
    
 }
 .design__text h2 {
@@ -413,3 +423,80 @@ img {
     max-width: 100%;
 }
 /* End Design */
+/* Start Portfolio */
+.portfolio__shuffle {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8rem;
+}
+.portfolio__shuffle li {
+    color: #000;
+    font-size: 1.6rem;
+    padding: 0.65em;
+}
+.portfolio__shuffle li.active {
+    color: #fff;
+    background-color: var(--main-color);
+}
+.portfolio__items {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 0;
+    margin-bottom: 3rem;
+}
+@media (min-width: 900px) {
+    .portfolio__items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (min-width: 1200px) {
+    .portfolio__items {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+.portfolio__item {
+    position: relative;
+    overflow: hidden;
+}
+.portfolio__item h4 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+.portfolio__item p {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: var(--main-color);
+}
+.portfolio__item img {
+    position: relative;
+    transition: transform 250ms ease-in-out;
+    min-width: 100%;
+}
+.portfolio__item .caption {
+    padding: 1rem;
+    position: absolute;
+    left: 0;
+    bottom: -100%;
+    background-color: #fff;
+    width: 100%;
+    transition: bottom 250ms ease-in-out;
+}
+.portfolio__item:hover img {
+    transform: rotate(3deg) scale(1.1);
+}
+.portfolio__item:hover .caption {
+    bottom: 0;
+}
+.more {
+    display: block;
+    width: fit-content;
+    margin: auto;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 1em 2em;
+    background-color: var(--main-color);
+    text-decoration: none;
+
+}
+
+/* End Portfolio */
