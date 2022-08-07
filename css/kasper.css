@@ -788,3 +788,83 @@ q {
     font-size: 1.5rem;
 }
 /* End Quote */
+/* Start Pricing */
+.pricing__box {
+    background-color: #f7f7f7;
+    
+}
+.pricing__box__head {
+    text-align: center;
+    padding: 4rem 0;
+    border-top: 1px solid var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+}
+.pricing__box__head h3 {
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+.pricing__box__head .price {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    
+}
+.price .unit {
+    font-size: 3rem;
+    align-self: flex-start;
+    margin-right: 1rem;
+}
+.price .number {
+    font-size: 6rem;
+    font-weight: bold;
+    margin-right: 1rem;
+}
+.price .time-frame {
+    font-size: 2rem;
+    font-weight: bold;
+}
+.pricing__content {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 3rem;
+    margin-bottom: 5rem;
+}
+.pricing__box__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid var(--main-color);
+    margin-bottom: 3rem;
+}
+.pricing__box__body li {
+    padding: 2rem;
+    font-size: 1.6rem;
+}
+.pricing__box__body li:not(:last-child) {
+    border-bottom: 1px solid var(--main-color);
+}
+.pricing__box__foot {
+    display: flex;
+    justify-content: center;
+}
+.pricing__box__foot a {
+    font-size: 1.6rem;
+    margin-bottom: 3rem;
+    border: 1px solid var(--main-color);
+    padding: 1em;
+}
+.special-request {
+    text-align: center;
+    font-size: 2rem;
+}
+.special-request p {
+    margin-bottom: 3rem;
+}
+.special-request a {
+    background-color: var(--main-color);
+    color: #fff;
+    font-size: 1.6rem;
+    padding: 0.7em 1.7em;
+}
+/* End Pricing */
