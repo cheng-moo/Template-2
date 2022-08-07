@@ -712,6 +712,7 @@ img {
 .user__text p:nth-of-type(2) {
     text-align: right;
     color: #777;
+    margin-bottom: 1rem;
 }
 .our-skills .bullets {
     display: flex;
@@ -768,3 +769,22 @@ img {
     right: -8px;
 }
 /* End Skills */
+/* Start Quote */
+.quote {
+    background-color: #333;
+    background-image: url('../images/quote.jpg');
+    background-size: cover;
+    background-blend-mode: multiply;
+    color: #fff;
+    text-align: center;
+    padding: 10rem 0;
+}
+q {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 2rem;
+}
+.quote span {
+    font-size: 1.5rem;
+}
+/* End Quote */
